@@ -8,5 +8,9 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/calc',methods=['GET','POST'])
+def calc():
+    return render_template('calc.html')
+
 
 app.run(debug=True)
