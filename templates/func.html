@@ -1,0 +1,28 @@
+<html>
+<head>
+  <link rel="stylesheet" href="{{url_for('static',filename='func.css')}}">
+  <title>Functions</title>
+</head>
+
+<body>
+  <a href="/" class="back">Back</a>
+  <div class="main">
+    <p class="sign" align="center">Functions</p>
+    <form id="form1" name="form1" class="form1" action="{{url_for('func')}}" method="POST">
+      <input  id ='number1' name ='number1' class="un " type="number" align="center" placeholder="Enter A Number">
+    </br>
+    <label for="func" class="select2">Choose a Function:</label>
+    <select name="func" id="func" class='select1' form="form1">
+      <option value="prime">Prime</option>
+      <option value="armstrong">Armstrong</option>
+      <option value="oe">Odd/Even</option>
+      <option value="factorial">Factorial</option>
+    </select>
+    </br> </br>
+      <input type="submit" class="answer" value="=">
+     
+         
+    </div>
+     
+</body>
+</html>
