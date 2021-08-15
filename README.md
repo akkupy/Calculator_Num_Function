@@ -16,7 +16,7 @@
  * Fill up the App name
  * Deploy
  * Wait for the deployment
- * Check if your site works on going to https://<app-name>.herokuapp.com!
+ * Check if your site works on going to https://{app-name}.herokuapp.com!
 
 
 # Self-hosting (For Devs)
