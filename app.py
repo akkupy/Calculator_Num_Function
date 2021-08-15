@@ -1,3 +1,7 @@
+from assets.fact import fact
+from assets.oddoreven import oe
+from assets.armstrong import armstrong
+from assets.primeornot import PrimeChecker
 from flask import Flask,url_for,request
 from flask.templating import render_template
 from assets import calcul
@@ -24,16 +28,36 @@ def calc():
 @app.route('/func',methods=['GET','POST'])
 def func():
     if request.method =="POST" and 'number1' in request.form:
-        number1=request.form['number1']
-        func=request.form['func']
-        if func =="armstrong":
-            return "arm"
-        elif func =="prime":
-            return "prime"
-        elif func =="oe":
-            return "oe"
-        else:
-            return "factorial"
+        try:
+            number1=int(request.form['number1'])
+            func=request.form['func']
+            if func =="armstrong":
+                result=armstrong(number1)
+                if result:
+                    msg="{} is an Armstrong number".format(number1)
+                else:
+                    msg="{} is not an Armstrong number".format(number1)
+                return render_template('func.html',msg=msg)
+            elif func =="prime":
+                result=PrimeChecker(number1)
+                if result:
+                    msg="{} is a Prime number".format(number1)
+                else:
+                    msg="{} is not a Prime number".format(number1)
+                return render_template('func.html',msg=msg)
+            elif func =="oe":
+                result=oe(number1)
+                if result=="Even":
+                    msg="{} is an Even number".format(number1)
+                else:
+                    msg="{} is an Odd number".format(number1)
+                return render_template('func.html',msg=msg)
+            else:
+                result=fact(number1)
+                msg="The factorial of {} is {}".format(number1,result)
+                return render_template('func.html',msg=msg)
+        except:
+            return render_template('func.html',msg="Enter a Valid Number!")
     return render_template('func.html')
 
 
