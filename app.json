@@ -1,0 +1,22 @@
+{
+    "name": "Calculator and Number Function",
+    "description": "A Webapp By Team CoDiN",
+    "logo": "https://www.involve.me/assets/images/blog/how-to-create-a-simple-price-calculator-and-capture-more-leads/calculator-M.png",
+    "keywords": [
+      "calculator",
+      "plugin",
+      "productivity"
+    ],
+    "repository": "https://github.com/AkkuPY/Calculator_Num_Function",
+    "env": {
+      "ENV": {
+        "description": "Setting this to ANYTHING will enable heroku.",
+        "value": "ANYTHING"
+      }
+    
+
+   
+        
+      }
+    
+  }
