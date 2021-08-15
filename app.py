@@ -60,5 +60,5 @@ def func():
             return render_template('func.html',msg="Enter a Valid Number!")
     return render_template('func.html')
 
-
-app.run(debug=True)
+if __name__=="__main__":
+    app.run(debug=True)
