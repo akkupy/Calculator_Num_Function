@@ -1,5 +1,6 @@
 from flask import Flask,url_for,request
 from flask.templating import render_template
+from assets import calcul
 
 
 
@@ -12,10 +13,11 @@ def index():
 @app.route('/calc',methods=['GET','POST'])
 def calc():
     if request.method=='POST' and 'number1' in request.form and 'number2' in request.form and 'operator' in request.form:
-        number1=request.form['number1']
-        number2=request.form['number2']
+        number1=int(request.form['number1'])
+        number2=int(request.form['number2'])
         operator=request.form['operator']
-        print(number1,number2,operator)
+        result=calcul(number1,number2,operator)
+        return render_template('calc.html',result=result)
 
     return render_template('calc.html')
 
@@ -32,7 +34,6 @@ def func():
             return "oe"
         else:
             return "factorial"
-        print(number1,func)
     return render_template('func.html')
 
 
