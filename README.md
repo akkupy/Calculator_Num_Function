@@ -1,2 +1,2 @@
-# CODIN
-Calculator using coding 
+# CALCULATOR AND NUMBER FUNCTION WEB APPLICATION
+Based on Python 
