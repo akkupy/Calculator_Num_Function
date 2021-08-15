@@ -3,7 +3,7 @@
 <h3 align="center">A Webapp Calculator!</h3>
 <h4 align="center">Based on Python Flask</h4>
 
-<p align="center"><a href="https://akkupy.github.io"><img src="assets/images/tapme.gif" width="100"></a></p>
+<p align="center"><a href="https://calculatorfunc.herokuapp.com"><img src="assets/images/tapme.gif" width="100"></a></p>
 
 
 
