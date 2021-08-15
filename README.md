@@ -10,6 +10,15 @@
 [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/akkupy/Calculator_Num_Function)
 
 
+# Steps To Follow On Heroku
+
+ * Click Deploy To Heroku
+ * Fill up the App name
+ * Deploy
+ * Wait for the deployment
+ * Check if your site works on going to https://<app-name>.herokuapp.com!
+
+
 # Self-hosting (For Devs)
 
 ## Simply clone the repository and run the main file:
